@@ -1,0 +1,305 @@
+<style>
+  div.sk-top-container {
+    color: black;
+    background-color: white;
+  }
+
+  div.sk-toggleable {
+    background-color: white;
+  }
+
+  label.sk-toggleable__label {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 0.2em 0.3em;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  div.sk-toggleable__content {
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    text-align: left;
+    background-color: #f0f8ff;
+  }
+
+  div.sk-toggleable__content pre {
+    margin: 0.2em;
+    color: black;
+    border-radius: 0.25em;
+    background-color: #f0f8ff;
+  }
+
+  input.sk-toggleable__control:checked~div.sk-toggleable__content {
+    max-height: 200px;
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+    background-color: #d4ebff;
+  }
+
+  div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+    background-color: #d4ebff;
+  }
+
+  input.sk-hidden--visually {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  div.sk-estimator {
+    font-family: monospace;
+    background-color: #f0f8ff;
+    margin: 0.25em 0.25em;
+    border: 1px dotted black;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+  }
+
+  div.sk-estimator:hover {
+    background-color: #d4ebff;
+  }
+
+  div.sk-parallel-item::after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid gray;
+    flex-grow: 1;
+  }
+
+  div.sk-label:hover label.sk-toggleable__label {
+    background-color: #d4ebff;
+  }
+
+  div.sk-serial::before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid gray;
+    box-sizing: border-box;
+    top: 2em;
+    bottom: 0;
+    left: 50%;
+  }
+
+  div.sk-serial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+
+  div.sk-item {
+    z-index: 1;
+  }
+
+  div.sk-parallel {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background-color: white;
+  }
+
+  div.sk-parallel-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+  }
+
+  div.sk-parallel-item:first-child::after {
+    align-self: flex-end;
+    width: 50%;
+  }
+
+  div.sk-parallel-item:last-child::after {
+    align-self: flex-start;
+    width: 50%;
+  }
+
+  div.sk-parallel-item:only-child::after {
+    width: 0;
+  }
+
+  div.sk-dashed-wrapped {
+    border: 1px dashed gray;
+    margin: 0.2em;
+    box-sizing: border-box;
+    padding-bottom: 0.1em;
+    background-color: white;
+    position: relative;
+  }
+
+  div.sk-label label {
+    font-family: monospace;
+    font-weight: bold;
+    background-color: white;
+    display: inline-block;
+    line-height: 1.2em;
+  }
+
+  div.sk-label-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  div.sk-container {
+    display: inline-block;
+    position: relative;
+  }
+</style>
+<div class="sk-top-container">
+  <div class="sk-container">
+    <div class="sk-item sk-dashed-wrapped">
+      <div class="sk-label-container">
+        <div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually"
+            id="b7134a82-6546-49d2-942b-86c13a19f10c" type="checkbox"><label class="sk-toggleable__label"
+            for="b7134a82-6546-49d2-942b-86c13a19f10c">Pipeline</label>
+          <div class="sk-toggleable__content">
+            <pre>Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('pipeline-1',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='median')),
+                                                                  ('standardscaler',
+                                                                   StandardScaler())]),
+                                                  ('feat1', 'feat3')),
+                                                 ('pipeline-2',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(fill_value='missing',
+                                                                                 strategy='constant')),
+                                                                  ('onehotencoder',
+                                                                   OneHotEncoder(handle_unknown='ignore'))]),
+                                                  ('feat0', 'feat2'))])),
+                ('logisticregression', LogisticRegression())])</pre>
+          </div>
+        </div>
+      </div>
+      <div class="sk-serial">
+        <div class="sk-item sk-dashed-wrapped">
+          <div class="sk-label-container">
+            <div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually"
+                id="769def9c-25e5-4485-957c-73cc9486deed" type="checkbox"><label class="sk-toggleable__label"
+                for="769def9c-25e5-4485-957c-73cc9486deed">columntransformer: ColumnTransformer</label>
+              <div class="sk-toggleable__content">
+                <pre>ColumnTransformer(transformers=[('pipeline-1',
+                                 Pipeline(steps=[('simpleimputer',
+                                                  SimpleImputer(strategy='median')),
+                                                 ('standardscaler',
+                                                  StandardScaler())]),
+                                 ('feat1', 'feat3')),
+                                ('pipeline-2',
+                                 Pipeline(steps=[('simpleimputer',
+                                                  SimpleImputer(fill_value='missing',
+                                                                strategy='constant')),
+                                                 ('onehotencoder',
+                                                  OneHotEncoder(handle_unknown='ignore'))]),
+                                 ('feat0', 'feat2'))])</pre>
+              </div>
+            </div>
+          </div>
+          <div class="sk-parallel">
+            <div class="sk-parallel-item">
+              <div class="sk-item">
+                <div class="sk-label-container">
+                  <div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually"
+                      id="57fb03d6-fe3d-475a-945e-bc3893cee9ee" type="checkbox"><label class="sk-toggleable__label"
+                      for="57fb03d6-fe3d-475a-945e-bc3893cee9ee">pipeline-1</label>
+                    <div class="sk-toggleable__content">
+                      <pre>('feat1', 'feat3')</pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="sk-serial">
+                  <div class="sk-item">
+                    <div class="sk-serial">
+                      <div class="sk-item">
+                        <div class="sk-estimator sk-toggleable"><input
+                            class="sk-toggleable__control sk-hidden--visually" id="378d1645-3b36-4f60-a10e-14aa9d9d486e"
+                            type="checkbox"><label class="sk-toggleable__label"
+                            for="378d1645-3b36-4f60-a10e-14aa9d9d486e">SimpleImputer</label>
+                          <div class="sk-toggleable__content">
+                            <pre>SimpleImputer(strategy='median')</pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sk-item">
+                        <div class="sk-estimator sk-toggleable"><input
+                            class="sk-toggleable__control sk-hidden--visually" id="7f171ba9-d258-4be8-8ec8-25af84cebdc8"
+                            type="checkbox"><label class="sk-toggleable__label"
+                            for="7f171ba9-d258-4be8-8ec8-25af84cebdc8">StandardScaler</label>
+                          <div class="sk-toggleable__content">
+                            <pre>StandardScaler()</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sk-parallel-item">
+              <div class="sk-item">
+                <div class="sk-label-container">
+                  <div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually"
+                      id="99502674-8ffe-4e32-9b86-8765c63bab6f" type="checkbox"><label class="sk-toggleable__label"
+                      for="99502674-8ffe-4e32-9b86-8765c63bab6f">pipeline-2</label>
+                    <div class="sk-toggleable__content">
+                      <pre>('feat0', 'feat2')</pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="sk-serial">
+                  <div class="sk-item">
+                    <div class="sk-serial">
+                      <div class="sk-item">
+                        <div class="sk-estimator sk-toggleable"><input
+                            class="sk-toggleable__control sk-hidden--visually" id="e8635c42-bce5-42e7-88e4-547f051e5f93"
+                            type="checkbox"><label class="sk-toggleable__label"
+                            for="e8635c42-bce5-42e7-88e4-547f051e5f93">SimpleImputer</label>
+                          <div class="sk-toggleable__content">
+                            <pre>SimpleImputer(fill_value='missing', strategy='constant')</pre>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sk-item">
+                        <div class="sk-estimator sk-toggleable"><input
+                            class="sk-toggleable__control sk-hidden--visually" id="4aafac22-3c97-493b-9404-dd9673092d68"
+                            type="checkbox"><label class="sk-toggleable__label"
+                            for="4aafac22-3c97-493b-9404-dd9673092d68">OneHotEncoder</label>
+                          <div class="sk-toggleable__content">
+                            <pre>OneHotEncoder(handle_unknown='ignore')</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually"
+              id="de0b9ab6-f5ec-460c-8e3c-cce4741439af" type="checkbox"><label class="sk-toggleable__label"
+              for="de0b9ab6-f5ec-460c-8e3c-cce4741439af">LogisticRegression</label>
+            <div class="sk-toggleable__content">
+              <pre>LogisticRegression()</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
